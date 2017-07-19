@@ -16,21 +16,25 @@ document.getElementById('strict').disabled = true;
 
 //****************Game Loop**************/
 function playerClick(e){
+    //get id, blink color and add chosen cell to player array 
     let id = '#' + e.target.id;
     blink(id);
     player.push(id);
 
+// Only do something if power is on and start is enabled
     if(start === true && power === true){
-
-        if(score === 20){
-            console.log('You Win!');
+        // if you score 20 you win and game ends
+        if(score >= 20){
+            alert('You Win!');
             return;
         }
         else{
+            // compare computer array and player array.. if returned true (matched) ,add to count.
             if(compareArrays(computer,player)){
                     document.getElementById("rightWrong").innerHTML = '';
                     count++;
-
+                    // compare array length match to make sure enough items have been clicked.
+                    // if so reset player, count.. generate new number , wait 2 secs and flash to player...
                 if(computer.length === player.length){
                     score++;
                     // document.getElementById('displayText').innerHTML = score;
@@ -46,7 +50,8 @@ function playerClick(e){
                 else{
                     return;
                 }
-                }
+            }
+            // if arrays dont match.. display wrong message... reset count and player..then flash sequence to player again
                 if(compareArrays(computer, player) === false){
                     document.getElementById("rightWrong").innerHTML = 'Wrong';
                     count = 0;
@@ -67,6 +72,7 @@ function playerClick(e){
 }
 }
 //******************Game Loop end*************************
+
 function blink (id){
     // after 1 second add class then take take class off again...
     setTimeout(function(){

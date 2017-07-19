@@ -6,7 +6,6 @@ let computer = [];
 let player = [];
 let start = false;
 let strict = false;
-let speed ;
 let count = 0;
 let score = 1;
 let power = false;
@@ -16,16 +15,29 @@ document.getElementById('strict').disabled = true;
 
 //****************Game Loop**************/
 function playerClick(e){
+
+
+// Only do something if power is on and start is enabled
+    if(start === true && power === true){
+
     //get id, blink color and add chosen cell to player array 
     let id = '#' + e.target.id;
     blink(id);
     player.push(id);
 
-// Only do something if power is on and start is enabled
-    if(start === true && power === true){
-        // if you score 20 you win and game ends
+        // if you score 20 you win and game ends .. then starts again from beginning after 2 secs
         if(score >= 20){
             alert('You Win!');
+            computer = [];
+            player = [];
+            start = true;
+            strict = false;
+            count = 0;
+            score = 1;
+            generateNext(0,3);
+             setTimeout(function(){
+                        flash(computer);
+                    },2000);
             return;
         }
         else{
@@ -82,7 +94,7 @@ function blink (id){
         // timeout to takeoff flash class
         setTimeout(function(){
             $(id).toggleClass('flash');
-        },250);
+        },500);
     },250);
 
     }
@@ -103,7 +115,7 @@ function flash(array){
         else{
             clearInterval(x);
         }
-    }, 500); // main speed
+    }, 700); // main speed
 }
 
 function playSound (id) {
@@ -158,7 +170,6 @@ function onOff(e){
           player = [];
           start = false;
           strict = false;
-          speed ;
           score = 0;
           power = false;
           document.getElementById('startButton').disabled = true;

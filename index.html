@@ -1,0 +1,67 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Simon Game</title>
+  <meta name="description" content="Simon Game">
+  <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" href="./index.css">
+    <script src="./jquery-3.2.1.js"></script> 
+    <script src="./index.js"></script>
+
+</head>
+
+<body>
+
+    <audio id="blue" src="https://s3.amazonaws.com/freecodecamp/simonSound1.mp3"></audio>
+    <audio id="red" src="https://s3.amazonaws.com/freecodecamp/simonSound2.mp3"></audio>
+    <audio id="orange" src="https://s3.amazonaws.com/freecodecamp/simonSound3.mp3"></audio>
+    <audio id="green" src="https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"></audio>
+
+
+    <div id="boxContainer">
+        <div id ="0"  class=" box1" style="background: blue;"> </div>
+        <div  id= "1" class=" box2" style="background: red;"></div>
+        <div id= "2" class=" box3" style="background: orange;"></div>
+        <div  id= "3" class=" box4" style="background: green;"></div>
+        <div  id= "centerCircle" class=" box5" style="background: #ECF0F1;"></div>
+        
+        <div id="title">
+            <h1 class="h1">Simon</h1>
+            <h6 id="rightWrong"></h6>
+        </div>
+        <div id="display">
+            <div >
+                <p id= "displayText"></p>
+                <h6>COUNT</h6>
+            </div>
+            <div >
+                <button id="startButton" style="background: red;"></button>
+                <h6>Start</h6>
+            </div>
+            <div>
+                <button id = "strictLight"></button>
+                <button id="strict"style="background: yellow;"></button>
+                <h6>Strict!</h6>
+            </div>
+
+        </div>
+        
+        <div id="switchContainer">
+            <label style="margin: 0 10px;" ><strong>OFF</strong></label>
+                <!-- Rectangular switch -->
+            <label class="switch">
+            <input type="checkbox" id= "checkbox">
+            <span class="slider"></span>
+            </label>
+            <label style="margin: 0 10px;"><strong>ON</strong></label>
+        </div>
+           
+        
+    </div>
+    
+</body>
+</html>

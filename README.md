@@ -1,8 +1,7 @@
-#### This project was bootstrapped with Create React App.
-
-#### Created using React , SCSS, Gulp and Bootstrap.
-
 # Simon-Game
+
+#### Created using HTML, CSS and javascript for free code camps front end certificate .
+
 ### Play here: https://linton-portman.github.io/Simon-Game/
 
 #### The following criteria had to be met

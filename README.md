@@ -1,3 +1,7 @@
+#### This project was bootstrapped with Create React App.
+
+#### Created using React , SCSS, Gulp and Bootstrap.
+
 # Simon-Game
 ### Play here: https://linton-portman.github.io/Simon-Game/
 
@@ -18,3 +22,9 @@
 * I can play in strict mode where if I get a button press wrong, it notifies me that I have done so, and the game restarts at a new random series of button presses.
 
 * I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over.
+
+##### To use clone/download repository
+
+##### npm install for all dependencies
+
+##### npm start to run

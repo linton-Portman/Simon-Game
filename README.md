@@ -22,8 +22,4 @@
 
 * I can win the game by getting a series of 20 steps correct. I am notified of my victory, then the game starts over.
 
-##### To use clone/download repository
 
-##### npm install for all dependencies
-
-##### npm start to run
